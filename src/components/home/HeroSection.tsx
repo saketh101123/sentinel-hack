@@ -3,9 +3,10 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import CountdownTimer from './CountdownTimer';
 import { Link } from 'react-router-dom';
+import { ChevronDown } from 'lucide-react';
 
-// Set the hackathon date - change to your actual date
-const hackathonDate = new Date('2023-12-31T09:00:00');
+// Set the hackathon date - April 28-29, 2025
+const hackathonDate = new Date('2025-04-28T09:00:00');
 
 const HeroSection = () => {
   const [glitching, setGlitching] = useState(false);
@@ -20,8 +21,15 @@ const HeroSection = () => {
     return () => clearInterval(glitchInterval);
   }, []);
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center pt-16 pb-12">
+    <section id="home" className="relative min-h-screen flex flex-col items-center justify-center pt-16 pb-12">
       <div className="absolute inset-0 z-0 cyber-grid opacity-10"></div>
       
       <div className="container mx-auto px-4 z-10">
@@ -38,15 +46,15 @@ const HeroSection = () => {
             className="mb-8"
           >
             <h1 
-              className={`text-5xl md:text-7xl font-cyber font-black mb-4 ${glitching ? 'glitch' : ''}`}
-              data-text="CYBER HACK 2023"
+              className={`text-4xl sm:text-5xl md:text-7xl font-cyber font-black mb-4 ${glitching ? 'glitch' : ''}`}
+              data-text="SENTINEL HACK 5.0"
             >
-              <span className="neon-text-red">CYBER</span> 
+              <span className="neon-text-red">SENTINEL</span> 
               <span className="neon-text-blue">HACK</span> 
-              <span className="text-white">2023</span>
+              <span className="text-white">5.0</span>
             </h1>
-            <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-6 text-gray-300">
-              Redefine the future through code. 48 hours of innovation, collaboration, and breakthrough technologies.
+            <p className="text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-6 text-gray-300">
+              24-hour state level hackathon on April 28-29, 2025. Redefine the future through code.
             </p>
             <CountdownTimer targetDate={hackathonDate} />
           </motion.div>
@@ -57,23 +65,28 @@ const HeroSection = () => {
             transition={{ delay: 1, duration: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 mt-8"
           >
-            <Link 
-              to="/register" 
-              className="font-cyber bg-cyber-red px-8 py-3 rounded clip-slant hover:shadow-neon-red transition-all duration-300 text-lg uppercase tracking-wider"
+            <a 
+              href="https://forms.google.com/register-sentinel-hack" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="font-cyber bg-cyber-red px-6 sm:px-8 py-3 rounded clip-slant hover:shadow-neon-red transition-all duration-300 text-base sm:text-lg uppercase tracking-wider"
             >
               Register Now
-            </Link>
-            <Link 
-              to="/tracks" 
-              className="font-cyber border border-neon-blue px-8 py-3 rounded clip-slant hover:shadow-neon-blue transition-all duration-300 text-lg uppercase tracking-wider"
+            </a>
+            <button 
+              onClick={() => scrollToSection('tracks')}
+              className="font-cyber border border-neon-blue px-6 sm:px-8 py-3 rounded clip-slant hover:shadow-neon-blue transition-all duration-300 text-base sm:text-lg uppercase tracking-wider"
             >
               Explore Tracks
-            </Link>
+            </button>
           </motion.div>
         </div>
       </div>
       
-      <div className="absolute bottom-10 left-0 right-0 flex justify-center">
+      <button 
+        onClick={() => scrollToSection('about')}
+        className="absolute bottom-10 left-0 right-0 flex justify-center cursor-pointer"
+      >
         <motion.div 
           animate={{ y: [0, -10, 0] }} 
           transition={{ 
@@ -81,23 +94,9 @@ const HeroSection = () => {
             duration: 1.5 
           }}
         >
-          <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            width="24" 
-            height="24" 
-            viewBox="0 0 24 24" 
-            fill="none" 
-            stroke="currentColor" 
-            strokeWidth="2" 
-            strokeLinecap="round" 
-            strokeLinejoin="round" 
-            className="text-neon-red"
-          >
-            <line x1="12" y1="5" x2="12" y2="19"></line>
-            <polyline points="19 12 12 19 5 12"></polyline>
-          </svg>
+          <ChevronDown size={32} className="text-neon-red" />
         </motion.div>
-      </div>
+      </button>
     </section>
   );
 };

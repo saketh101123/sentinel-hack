@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { useIsMobile } from '../../hooks/use-mobile';
 
 interface CountdownTimerProps {
   targetDate: Date;
@@ -35,6 +36,7 @@ const calculateTimeLeft = (targetDate: Date): TimeLeft => {
 const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft(targetDate));
   const [isBlinking, setIsBlinking] = useState<boolean>(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -59,16 +61,16 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
   ];
 
   return (
-    <div className="flex flex-wrap justify-center gap-4">
+    <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
       {timeBoxes.map((box, index) => (
         <div 
           key={index}
-          className="glassmorphism border border-white/20 p-4 flex flex-col items-center min-w-[90px]"
+          className="glassmorphism border border-white/20 p-3 sm:p-4 flex flex-col items-center min-w-[70px] sm:min-w-[90px] relative"
         >
-          <span className="text-3xl sm:text-4xl font-cyber font-bold">
+          <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-cyber font-bold">
             {String(box.value).padStart(2, '0')}
           </span>
-          <span className="text-xs sm:text-sm mt-2 text-gray-400 font-cyber">
+          <span className="text-xs sm:text-sm mt-1 sm:mt-2 text-gray-400 font-cyber">
             {box.label}
           </span>
           {(index < timeBoxes.length - 1) && (

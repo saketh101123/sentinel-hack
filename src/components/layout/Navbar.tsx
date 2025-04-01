@@ -5,12 +5,12 @@ import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navItems = [
-  { name: 'Home', path: '/' },
-  { name: 'Schedule', path: '/schedule' },
-  { name: 'Tracks', path: '/tracks' },
-  { name: 'Sponsors', path: '/sponsors' },
-  { name: 'FAQs', path: '/faqs' },
-  { name: 'Contact', path: '/contact' },
+  { name: 'Home', path: '/', id: 'home' },
+  { name: 'About', path: '/#about', id: 'about' },
+  { name: 'Tracks', path: '/#tracks', id: 'tracks' },
+  { name: 'Sponsors', path: '/#sponsors', id: 'sponsors' },
+  { name: 'FAQs', path: '/#faqs', id: 'faqs' },
+  { name: 'Contact', path: '/#contact', id: 'contact' },
 ];
 
 const Navbar = () => {
@@ -31,6 +31,14 @@ const Navbar = () => {
     };
   }, [scrolled]);
 
+  const scrollToSection = (id: string) => {
+    setIsOpen(false);
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header 
       className={`fixed w-full z-50 transition-all duration-300 ${
@@ -41,32 +49,37 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
             <div className="flex items-center gap-2">
-              <span className="font-cyber text-xl md:text-2xl font-bold neon-text-red">
-                CYBER
+              <span className="font-cyber text-lg sm:text-xl md:text-2xl font-bold neon-text-red">
+                SENTINEL
               </span>
-              <span className="font-cyber text-xl md:text-2xl font-bold neon-text-blue">
+              <span className="font-cyber text-lg sm:text-xl md:text-2xl font-bold neon-text-blue">
                 HACK
+              </span>
+              <span className="font-cyber text-lg sm:text-xl md:text-2xl font-bold text-white">
+                5.0
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-4 lg:space-x-6">
             {navItems.map((item, index) => (
-              <Link
+              <button
                 key={index}
-                to={item.path}
+                onClick={() => scrollToSection(item.id)}
                 className="font-cyber text-sm uppercase tracking-wider hover:text-neon-red transition-colors duration-300"
               >
                 {item.name}
-              </Link>
+              </button>
             ))}
-            <Link
-              to="/register"
-              className="font-cyber text-sm uppercase tracking-wider ml-4 bg-cyber-red px-6 py-2 rounded clip-slant hover:shadow-neon-red transition-all duration-300"
+            <a
+              href="https://forms.google.com/register-sentinel-hack"
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="font-cyber text-sm uppercase tracking-wider ml-2 bg-cyber-red px-4 lg:px-6 py-2 rounded clip-slant hover:shadow-neon-red transition-all duration-300"
             >
               Register
-            </Link>
+            </a>
           </nav>
 
           {/* Mobile menu button */}
@@ -91,22 +104,23 @@ const Navbar = () => {
           >
             <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
               {navItems.map((item, index) => (
-                <Link
+                <button
                   key={index}
-                  to={item.path}
-                  className="font-cyber text-sm uppercase tracking-wider py-2 hover:text-neon-red transition-colors duration-300"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => scrollToSection(item.id)}
+                  className="font-cyber text-sm uppercase tracking-wider py-2 text-left hover:text-neon-red transition-colors duration-300"
                 >
                   {item.name}
-                </Link>
+                </button>
               ))}
-              <Link
-                to="/register"
+              <a
+                href="https://forms.google.com/register-sentinel-hack"
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="font-cyber text-sm uppercase tracking-wider bg-cyber-red px-6 py-2 text-center rounded clip-slant hover:shadow-neon-red transition-all duration-300"
                 onClick={() => setIsOpen(false)}
               >
                 Register
-              </Link>
+              </a>
             </div>
           </motion.div>
         )}

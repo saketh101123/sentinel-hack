@@ -3,6 +3,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const CtaSection = () => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="contact" className="py-12 sm:py-16 md:py-20 relative overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -34,10 +41,10 @@ const CtaSection = () => {
               Register Now
             </a>
             <a 
-              href="#" 
+              href="mailto:info@sentinelhack.tech" 
               className="font-cyber border border-neon-blue px-4 sm:px-6 py-2 sm:py-3 md:px-8 md:py-4 rounded clip-slant hover:shadow-neon-blue transition-all duration-300 text-sm sm:text-base md:text-lg uppercase tracking-wider"
             >
-              Download Brochure
+              Contact Us
             </a>
           </div>
         </motion.div>

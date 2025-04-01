@@ -75,7 +75,7 @@ const AboutSection = () => {
                 </div>
                 <div>
                   <h3 className="font-cyber text-sm sm:text-base md:text-lg">Venue</h3>
-                  <p className="text-xs sm:text-sm md:text-base text-gray-300">Innovation Hub, Tech University Campus</p>
+                  <p className="text-xs sm:text-sm md:text-base text-gray-300">KSIT Campus, Bengaluru</p>
                 </div>
               </div>
               <div className="flex items-center">

@@ -76,7 +76,7 @@ const Footer = () => {
             <h3 className="text-lg font-cyber mb-4">Contact Us</h3>
             <p className="mb-2 text-gray-300">
               <span className="block font-semibold">Email:</span>
-              <a href="mailto:info@sentinelhack.tech" className="hover:text-neon-red transition-colors">info@sentinelhack.tech</a>
+              <a href="mailto:info@SentinelHack" className="hover:text-neon-red transition-colors">info@SentinelHack</a>
             </p>
             <p className="mb-2 text-gray-300">
               <span className="block font-semibold">Location:</span>

@@ -41,7 +41,7 @@ const CtaSection = () => {
               Register Now
             </a>
             <a 
-              href="mailto:info@sentinelhack.tech" 
+              href="mailto:info@SentinelHack" 
               className="font-cyber border border-neon-blue px-4 sm:px-6 py-2 sm:py-3 md:px-8 md:py-4 rounded clip-slant hover:shadow-neon-blue transition-all duration-300 text-sm sm:text-base md:text-lg uppercase tracking-wider"
             >
               Contact Us

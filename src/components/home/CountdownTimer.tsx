@@ -39,7 +39,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
   const isMobile = useIsMobile();
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft(targetDate));
     }, 1000);
 
@@ -48,10 +48,10 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
     }, 1000);
 
     return () => {
-      clearTimeout(timer);
+      clearInterval(timer);
       clearInterval(blinkInterval);
     };
-  });
+  }, [targetDate]);
 
   const timeBoxes = [
     { label: 'DAYS', value: timeLeft.days },
@@ -61,19 +61,19 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
   ];
 
   return (
-    <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
+    <div className="flex flex-wrap justify-center gap-3 mt-6">
       {timeBoxes.map((box, index) => (
         <div 
           key={index}
-          className="glassmorphism border border-white/20 p-3 sm:p-4 flex flex-col items-center min-w-[70px] sm:min-w-[90px] relative"
+          className="glassmorphism border border-white/20 px-3 py-2 sm:p-4 flex flex-col items-center min-w-[65px] sm:min-w-[90px] relative"
         >
           <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-cyber font-bold">
             {String(box.value).padStart(2, '0')}
           </span>
-          <span className="text-xs sm:text-sm mt-1 sm:mt-2 text-gray-400 font-cyber">
+          <span className="text-xs sm:text-sm mt-1 text-gray-400 font-cyber">
             {box.label}
           </span>
-          {(index < timeBoxes.length - 1) && (
+          {!isMobile && (index < timeBoxes.length - 1) && (
             <span className={`hidden sm:block absolute -right-2.5 text-2xl top-1/2 transform -translate-y-1/2 ${isBlinking ? 'opacity-100' : 'opacity-0'} transition-opacity`}>
               :
             </span>

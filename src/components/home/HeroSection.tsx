@@ -29,7 +29,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex flex-col items-center justify-center pt-16 pb-12">
+    <section id="home" className="relative min-h-screen flex flex-col items-center justify-center pt-16 pb-10">
       <div className="absolute inset-0 z-0 cyber-grid opacity-10"></div>
       
       <div className="container mx-auto px-4 z-10">
@@ -43,17 +43,17 @@ const HeroSection = () => {
               type: "spring",
               stiffness: 100
             }}
-            className="mb-8"
+            className="mb-6 sm:mb-8"
           >
             <h1 
-              className={`text-4xl sm:text-5xl md:text-7xl font-cyber font-black mb-4 ${glitching ? 'glitch' : ''}`}
+              className={`text-3xl sm:text-5xl md:text-7xl font-cyber font-black mb-3 sm:mb-4 ${glitching ? 'glitch' : ''}`}
               data-text="SENTINEL HACK 5.0"
             >
               <span className="neon-text-red">SENTINEL</span> 
               <span className="neon-text-blue">HACK</span> 
               <span className="text-white">5.0</span>
             </h1>
-            <p className="text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-6 text-gray-300">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-4 sm:mb-6 text-gray-300 px-2">
               24-hour state level hackathon on April 28-29, 2025. Redefine the future through code.
             </p>
             <CountdownTimer targetDate={hackathonDate} />
@@ -63,19 +63,19 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 mt-8"
+            className="flex flex-col sm:flex-row gap-4 mt-6 sm:mt-8"
           >
             <a 
               href="https://forms.google.com/register-sentinel-hack" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="font-cyber bg-cyber-red px-6 sm:px-8 py-3 rounded clip-slant hover:shadow-neon-red transition-all duration-300 text-base sm:text-lg uppercase tracking-wider"
+              className="font-cyber bg-cyber-red px-6 sm:px-8 py-3 rounded clip-slant hover:shadow-neon-red transition-all duration-300 text-sm sm:text-lg uppercase tracking-wider"
             >
               Register Now
             </a>
             <button 
               onClick={() => scrollToSection('tracks')}
-              className="font-cyber border border-neon-blue px-6 sm:px-8 py-3 rounded clip-slant hover:shadow-neon-blue transition-all duration-300 text-base sm:text-lg uppercase tracking-wider"
+              className="font-cyber border border-neon-blue px-6 sm:px-8 py-3 rounded clip-slant hover:shadow-neon-blue transition-all duration-300 text-sm sm:text-lg uppercase tracking-wider"
             >
               Explore Tracks
             </button>
@@ -83,20 +83,20 @@ const HeroSection = () => {
         </div>
       </div>
       
-      <button 
-        onClick={() => scrollToSection('about')}
-        className="absolute bottom-10 left-0 right-0 flex justify-center cursor-pointer"
-      >
-        <motion.div 
-          animate={{ y: [0, -10, 0] }} 
+      <div className="absolute bottom-8 left-0 right-0 flex justify-center">
+        <motion.button 
+          onClick={() => scrollToSection('about')}
+          animate={{ y: [0, 10, 0] }} 
           transition={{ 
             repeat: Infinity, 
             duration: 1.5 
           }}
+          className="cursor-pointer bg-transparent border-none text-neon-blue hover:text-neon-red transition-colors duration-300"
+          aria-label="Scroll down"
         >
-          <ChevronDown size={32} className="text-neon-red" />
-        </motion.div>
-      </button>
+          <ChevronDown size={30} strokeWidth={2.5} />
+        </motion.button>
+      </div>
     </section>
   );
 };

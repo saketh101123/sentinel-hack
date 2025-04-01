@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -10,7 +9,7 @@ const faqs = [
   },
   {
     question: 'What should I bring to the hackathon?',
-    answer: 'Participants should bring their own laptops, chargers, and any hardware they need for their projects. We'll provide the working space, internet, food, and beverages.'
+    answer: "Participants should bring their own laptops, chargers, and any hardware they need for their projects. We'll provide the working space, internet, food, and beverages."
   },
   {
     question: 'Is there a registration fee?',

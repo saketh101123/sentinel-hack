@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -14,6 +15,10 @@ export default {
 			center: true,
 			padding: '2rem',
 			screens: {
+				'sm': '640px',
+				'md': '768px',
+				'lg': '1024px',
+				'xl': '1280px',
 				'2xl': '1400px'
 			}
 		},
@@ -61,36 +66,79 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				neon: {
+					red: '#ff1a3e',
+					blue: '#1ed5ff',
+					purple: '#9f1fff'
+				},
+				cyber: {
+					dark: '#0a0a0c',
+					darker: '#050506',
+					light: '#1e1e24',
+					red: {
+						DEFAULT: '#ff1a3e',
+						muted: '#ff1a3e80'
+					}
 				}
+			},
+			fontFamily: {
+				'cyber': ['Orbitron', 'sans-serif'],
+				'code': ['JetBrains Mono', 'monospace'],
+				'sans': ['Inter', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
+			boxShadow: {
+				'neon-red': '0 0 5px #ff1a3e, 0 0 20px rgba(255, 26, 62, 0.3)',
+				'neon-blue': '0 0 5px #1ed5ff, 0 0 20px rgba(30, 213, 255, 0.3)',
+			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' },
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' },
+				},
+				'pulse-neon': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.5' },
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' },
+				},
+				'gradient-flow': {
+					'0%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' },
+					'100%': { backgroundPosition: '0% 50%' }
+				},
+				'blink': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-neon': 'pulse-neon 3s ease-in-out infinite',
+				'float': 'float 6s ease-in-out infinite',
+				'gradient-flow': 'gradient-flow 5s ease infinite',
+				'blink': 'blink 1.5s infinite'
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'cyber-grid': 'linear-gradient(rgba(10, 10, 12, 0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(10, 10, 12, 0.8) 1px, transparent 1px)',
+			},
+			backdropBlur: {
+				xs: '2px',
 			}
-		}
+		},
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;

@@ -32,7 +32,50 @@ const HeroSection = () => {
     <section id="home" className="relative min-h-screen flex flex-col items-center justify-center pt-16 pb-10">
       <div className="absolute inset-0 z-0 cyber-grid opacity-10"></div>
       
-      <div className="container mx-auto px-4 z-10">
+      <div className="container mx-auto px-4 z-10 mt-12">
+        {/* Institution header */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 lg:gap-10 mb-8 md:mb-12">
+          {/* Left logo (KSIT) */}
+          <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28">
+            <img 
+              src="/placeholder.svg" 
+              alt="KSIT Logo" 
+              className="w-full h-full object-contain"
+            />
+          </div>
+          
+          {/* Center text */}
+          <div className="text-center md:text-left">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-cyber font-bold mb-1 md:mb-2">
+              K S INSTITUTE OF TECHNOLOGY
+            </h2>
+            <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-1 md:mb-2">
+              Department of Computer Science and Engineering
+            </p>
+            <p className="text-base sm:text-lg md:text-xl text-neon-blue font-cyber">
+              Firefox Club Presents
+            </p>
+          </div>
+          
+          {/* Right logo (25 years) */}
+          <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28">
+            <img 
+              src="/placeholder.svg" 
+              alt="25 Years Logo" 
+              className="w-full h-full object-contain"
+            />
+          </div>
+        </div>
+        
+        {/* Sentinel Hack 5.0 Logo */}
+        <div className="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] mx-auto mb-6 sm:mb-8">
+          <img 
+            src="/placeholder.svg" 
+            alt="Sentinel Hack 5.0" 
+            className="w-full h-full object-contain"
+          />
+        </div>
+
         <div className="flex flex-col items-center text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}

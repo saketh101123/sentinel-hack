@@ -35,10 +35,10 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 z-10 mt-12">
         {/* Institution header */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 lg:gap-10 mb-8 md:mb-12">
-          {/* Left logo (KSIT) */}
-          <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28">
+          {/* Left logo (KSIT) - Swapped as per request */}
+          <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24">
             <img 
-              src="/placeholder.svg" 
+              src="/lovable-uploads/fc380532-71fb-496f-bd40-ac362af0f3e7.png" 
               alt="KSIT Logo" 
               className="w-full h-full object-contain"
             />
@@ -57,10 +57,10 @@ const HeroSection = () => {
             </p>
           </div>
           
-          {/* Right logo (25 years) */}
-          <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28">
+          {/* Right logo (25 years) - Swapped as per request */}
+          <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24">
             <img 
-              src="/placeholder.svg" 
+              src="/lovable-uploads/92996f96-6f31-4d68-9605-95e799b79c7d.png" 
               alt="25 Years Logo" 
               className="w-full h-full object-contain"
             />
@@ -68,9 +68,9 @@ const HeroSection = () => {
         </div>
         
         {/* Sentinel Hack 5.0 Logo */}
-        <div className="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] mx-auto mb-6 sm:mb-8">
+        <div className="w-full max-w-[200px] sm:max-w-[250px] md:max-w-[300px] mx-auto mb-6 sm:mb-8">
           <img 
-            src="/placeholder.svg" 
+            src="/lovable-uploads/4a4281f1-17f9-45e0-ad93-43017c48b04d.png" 
             alt="Sentinel Hack 5.0" 
             className="w-full h-full object-contain"
           />

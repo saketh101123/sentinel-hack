@@ -33,42 +33,44 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0 cyber-grid opacity-10"></div>
       
       <div className="container mx-auto px-4 z-10 mt-12">
-        {/* Institution header */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 lg:gap-10 mb-8 md:mb-12">
-          {/* Left logo (KSIT) - Swapped as per request */}
-          <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24">
-            <img 
-              src="/lovable-uploads/fc380532-71fb-496f-bd40-ac362af0f3e7.png" 
-              alt="KSIT Logo" 
-              className="w-full h-full object-contain"
-            />
-          </div>
-          
-          {/* Center text */}
-          <div className="text-center md:text-left">
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-cyber font-bold mb-1 md:mb-2">
-              K S INSTITUTE OF TECHNOLOGY
-            </h2>
-            <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-1 md:mb-2">
-              Department of Computer Science and Engineering
-            </p>
-            <p className="text-base sm:text-lg md:text-xl text-neon-blue font-cyber">
-              Firefox Club Presents
-            </p>
-          </div>
-          
-          {/* Right logo (25 years) - Swapped as per request */}
-          <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24">
-            <img 
-              src="/lovable-uploads/92996f96-6f31-4d68-9605-95e799b79c7d.png" 
-              alt="25 Years Logo" 
-              className="w-full h-full object-contain"
-            />
+        {/* Institution header - Now centered */}
+        <div className="flex flex-col items-center justify-center mb-8 md:mb-12">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 lg:gap-10">
+            {/* Left logo (KSIT) */}
+            <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24">
+              <img 
+                src="/lovable-uploads/fc380532-71fb-496f-bd40-ac362af0f3e7.png" 
+                alt="KSIT Logo" 
+                className="w-full h-full object-contain"
+              />
+            </div>
+            
+            {/* Center text - Now properly centered */}
+            <div className="text-center">
+              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-cyber font-bold mb-1 md:mb-2">
+                K S INSTITUTE OF TECHNOLOGY
+              </h2>
+              <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-1 md:mb-2">
+                Department of Computer Science and Engineering
+              </p>
+              <p className="text-base sm:text-lg md:text-xl text-neon-blue font-cyber">
+                Firefox Club Presents
+              </p>
+            </div>
+            
+            {/* Right logo (25 years) */}
+            <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24">
+              <img 
+                src="/lovable-uploads/92996f96-6f31-4d68-9605-95e799b79c7d.png" 
+                alt="25 Years Logo" 
+                className="w-full h-full object-contain"
+              />
+            </div>
           </div>
         </div>
         
-        {/* Sentinel Hack 5.0 Logo */}
-        <div className="w-full max-w-[200px] sm:max-w-[250px] md:max-w-[300px] mx-auto mb-6 sm:mb-8">
+        {/* Sentinel Hack 5.0 Logo - Made smaller */}
+        <div className="w-full max-w-[150px] sm:max-w-[180px] md:max-w-[220px] mx-auto mb-6 sm:mb-8">
           <img 
             src="/lovable-uploads/4a4281f1-17f9-45e0-ad93-43017c48b04d.png" 
             alt="Sentinel Hack 5.0" 

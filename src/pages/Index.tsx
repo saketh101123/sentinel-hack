@@ -7,6 +7,7 @@ import TracksSection from '../components/home/TracksSection';
 import SponsorsSection from '../components/home/SponsorsSection';
 import FAQSection from '../components/home/FAQSection';
 import CtaSection from '../components/home/CtaSection';
+import RulesSection from '../components/home/RulesSection';
 import { motion } from 'framer-motion';
 
 const Index = () => {
@@ -24,6 +25,7 @@ const Index = () => {
       >
         <AboutSection />
         <TracksSection />
+        <RulesSection />
         <SponsorsSection />
         <FAQSection />
         <CtaSection />

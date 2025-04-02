@@ -4,12 +4,14 @@ import { motion } from 'framer-motion';
 import CountdownTimer from './CountdownTimer';
 import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
+import { useIsMobile } from '../../hooks/use-mobile';
 
 // Set the hackathon date - April 28-29, 2025
 const hackathonDate = new Date('2025-04-28T09:00:00');
 
 const HeroSection = () => {
   const [glitching, setGlitching] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     // Create random glitch effect
@@ -35,7 +37,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 z-10 mt-12">
         {/* Institution header - Now centered */}
         <div className="flex flex-col items-center justify-center mb-8 md:mb-12">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 lg:gap-10">
+          <div className="flex flex-row items-center justify-center gap-4 md:gap-6 lg:gap-10">
             {/* Left logo (KSIT) */}
             <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24">
               <img 

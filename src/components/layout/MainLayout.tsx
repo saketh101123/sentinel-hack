@@ -11,9 +11,10 @@ interface MainLayoutProps {
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
     <div className="min-h-screen flex flex-col bg-main">
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-transparent z-0"></div>
       <Navbar />
       <motion.main 
-        className="flex-grow"
+        className="flex-grow relative z-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}

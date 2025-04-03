@@ -18,7 +18,7 @@
     --popover: 0 0% 7%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 359 100% 55%;
+    --primary: 359 89% 35%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 205 100% 50%;
@@ -35,13 +35,13 @@
 
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
-    --ring: 359 100% 55%;
+    --ring: 359 100% 45%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 3.9%;
     --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 359 100% 55%;
+    --sidebar-primary: 359 100% 45%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 0 0% 9.9%;
     --sidebar-accent-foreground: 0 0% 98%;
@@ -71,7 +71,7 @@
 @layer utilities {
   .bg-main {
     background-color: rgb(10, 10, 12);
-    background-image: url('/lovable-uploads/33062998-9861-4b8b-a14b-6a7f573b494c.png');
+    background-image: url('/lovable-uploads/00a59b74-e80e-481c-bf02-1363e1698f66.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -83,7 +83,7 @@
   }
 
   .glassmorphism {
-    @apply bg-opacity-20 bg-black backdrop-blur-md border border-white/10;
+    @apply bg-opacity-20 bg-black backdrop-blur-md border border-cyber-red/10;
   }
 
   .clip-slant {
@@ -91,7 +91,7 @@
   }
 
   .neon-text-red {
-    @apply text-neon-red;
+    @apply text-cyber-red;
     text-shadow: 0 0 5px #ff1a3e, 0 0 20px rgba(255, 26, 62, 0.5);
   }
 
@@ -101,7 +101,7 @@
   }
 
   .neon-border-red {
-    @apply border-neon-red;
+    @apply border-cyber-red;
     box-shadow: 0 0 5px #ff1a3e, 0 0 15px rgba(255, 26, 62, 0.5);
   }
 

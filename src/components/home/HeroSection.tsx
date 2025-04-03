@@ -32,7 +32,7 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex flex-col items-center justify-center pt-16 pb-10">
-      <div className="absolute inset-0 z-0 cyber-grid opacity-10"></div>
+      <div className="absolute inset-0 z-0 cyber-grid opacity-30"></div>
       
       <div className="container mx-auto px-4 z-10 mt-12">
         {/* Institution header - Now centered */}
@@ -55,7 +55,7 @@ const HeroSection = () => {
               <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-1 md:mb-2">
                 Department of Computer Science and Engineering
               </p>
-              <p className="text-base sm:text-lg md:text-xl text-neon-blue font-cyber">
+              <p className="text-base sm:text-lg md:text-xl text-cyber-red font-cyber">
                 Firefox Club Presents
               </p>
             </div>
@@ -97,7 +97,7 @@ const HeroSection = () => {
               data-text="SENTINEL HACK 5.0"
             >
               <span className="neon-text-red">SENTINEL</span> 
-              <span className="neon-text-blue">HACK</span> 
+              <span className="text-white">HACK</span> 
               <span className="text-white">5.0</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-4 sm:mb-6 text-gray-300 px-2">
@@ -122,7 +122,7 @@ const HeroSection = () => {
             </a>
             <button 
               onClick={() => scrollToSection('tracks')}
-              className="font-cyber border border-neon-blue px-6 sm:px-8 py-3 rounded clip-slant hover:shadow-neon-blue transition-all duration-300 text-sm sm:text-lg uppercase tracking-wider"
+              className="font-cyber border border-cyber-red/50 px-6 sm:px-8 py-3 rounded clip-slant hover:shadow-neon-red transition-all duration-300 text-sm sm:text-lg uppercase tracking-wider"
             >
               Explore Tracks
             </button>
@@ -138,7 +138,7 @@ const HeroSection = () => {
             repeat: Infinity, 
             duration: 1.5 
           }}
-          className="cursor-pointer bg-transparent border-none text-neon-blue hover:text-neon-red transition-colors duration-300"
+          className="cursor-pointer bg-transparent border-none text-cyber-red hover:text-white transition-colors duration-300"
           aria-label="Scroll down"
         >
           <ChevronDown size={30} strokeWidth={2.5} />

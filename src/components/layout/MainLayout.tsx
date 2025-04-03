@@ -10,7 +10,8 @@ interface MainLayoutProps {
 
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
-    <div className="min-h-screen flex flex-col bg-main">
+    <div className="min-h-screen flex flex-col">
+      <div className="fixed inset-0 bg-main -z-10"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-transparent z-0"></div>
       <Navbar />
       <motion.main 

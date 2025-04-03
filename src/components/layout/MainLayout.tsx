@@ -11,11 +11,11 @@ interface MainLayoutProps {
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Fixed background with the red cyberpunk image */}
+      {/* Fixed background with the new red cyberpunk image */}
       <div 
         className="fixed inset-0 bg-cover bg-center bg-no-repeat -z-10" 
         style={{ 
-          backgroundImage: "url('/lovable-uploads/2a8d882f-f717-4b9c-b4ad-c7737345f6bb.png')", 
+          backgroundImage: "url('/lovable-uploads/425a63c2-009f-48e6-8d55-31ac4bfa49fa.png')", 
           backgroundAttachment: "fixed" 
         }}
       ></div>

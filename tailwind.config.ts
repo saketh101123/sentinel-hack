@@ -68,17 +68,17 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				neon: {
-					red: '#ff1a3e',
-					blue: '#1ed5ff',
-					purple: '#9f1fff'
+					red: '#ff2a4d',
+					blue: '#25e1ff',
+					purple: '#b347ff'
 				},
 				cyber: {
-					dark: '#0a0a0c',
-					darker: '#050506',
-					light: '#1e1e24',
+					dark: '#101225',
+					darker: '#080a18',
+					light: '#1c1f3a',
 					red: {
-						DEFAULT: '#ff1a3e',
-						muted: '#ff1a3e80'
+						DEFAULT: '#ff2a4d',
+						muted: '#ff2a4d80'
 					}
 				}
 			},

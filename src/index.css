@@ -9,44 +9,44 @@
 
 @layer base {
   :root {
-    --background: 230 35% 7%;
+    --background: 225 40% 9%;
     --foreground: 0 0% 98%;
 
-    --card: 230 35% 9%;
+    --card: 225 40% 12%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 230 35% 7%;
+    --popover: 225 40% 9%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 345 82% 40%;
+    --primary: 340 85% 45%;
     --primary-foreground: 0 0% 100%;
     
-    --secondary: 196 80% 45%;
+    --secondary: 195 90% 56%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 230 30% 20%;
-    --muted-foreground: 0 0% 70%;
+    --muted: 225 35% 25%;
+    --muted-foreground: 0 0% 75%;
 
-    --accent: 265 70% 50%;
+    --accent: 275 80% 60%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 230 35% 15%;
-    --input: 230 35% 15%;
-    --ring: 345 82% 45%;
+    --border: 225 40% 20%;
+    --input: 225 40% 20%;
+    --ring: 340 85% 50%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 230 35% 7%;
+    --sidebar-background: 225 40% 9%;
     --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 345 82% 40%;
+    --sidebar-primary: 340 85% 45%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 230 35% 15%;
+    --sidebar-accent: 225 40% 20%;
     --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 230 35% 15%;
-    --sidebar-ring: 345 82% 45%;
+    --sidebar-border: 225 40% 20%;
+    --sidebar-ring: 340 85% 50%;
   }
 }
 
@@ -82,23 +82,43 @@
   }
 
   .neon-text-red {
-    @apply text-cyber-red;
-    text-shadow: 0 0 5px #ff1a3e, 0 0 20px rgba(255, 26, 62, 0.5);
+    @apply text-neon-red;
+    text-shadow: 0 0 5px #ff3a6a, 0 0 20px rgba(255, 58, 106, 0.5);
   }
 
   .neon-text-blue {
     @apply text-neon-blue;
-    text-shadow: 0 0 5px #1ed5ff, 0 0 20px rgba(30, 213, 255, 0.5);
+    text-shadow: 0 0 5px #22e8ff, 0 0 20px rgba(34, 232, 255, 0.5);
+  }
+
+  .neon-text-purple {
+    @apply text-neon-purple;
+    text-shadow: 0 0 5px #c851ff, 0 0 20px rgba(200, 81, 255, 0.5);
+  }
+
+  .neon-text-teal {
+    @apply text-neon-teal;
+    text-shadow: 0 0 5px #0affc2, 0 0 20px rgba(10, 255, 194, 0.5);
   }
 
   .neon-border-red {
-    @apply border-cyber-red;
-    box-shadow: 0 0 5px #ff1a3e, 0 0 15px rgba(255, 26, 62, 0.5);
+    @apply border-neon-red;
+    box-shadow: 0 0 5px #ff3a6a, 0 0 15px rgba(255, 58, 106, 0.5);
   }
 
   .neon-border-blue {
     @apply border-neon-blue;
-    box-shadow: 0 0 5px #1ed5ff, 0 0 15px rgba(30, 213, 255, 0.5);
+    box-shadow: 0 0 5px #22e8ff, 0 0 15px rgba(34, 232, 255, 0.5);
+  }
+
+  .neon-border-purple {
+    @apply border-neon-purple;
+    box-shadow: 0 0 5px #c851ff, 0 0 15px rgba(200, 81, 255, 0.5);
+  }
+
+  .neon-border-teal {
+    @apply border-neon-teal;
+    box-shadow: 0 0 5px #0affc2, 0 0 15px rgba(10, 255, 194, 0.5);
   }
 
   .cyber-grid {

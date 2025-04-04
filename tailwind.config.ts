@@ -68,17 +68,27 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				neon: {
-					red: '#ff2a4d',
-					blue: '#25e1ff',
-					purple: '#b347ff'
+					red: '#ff3a6a',
+					blue: '#22e8ff',
+					purple: '#c851ff',
+					teal: '#0affc2',
+					yellow: '#ffdb4d'
 				},
 				cyber: {
-					dark: '#101225',
-					darker: '#080a18',
-					light: '#1c1f3a',
+					dark: '#0e102a',
+					darker: '#070920',
+					light: '#181c42',
 					red: {
-						DEFAULT: '#ff2a4d',
-						muted: '#ff2a4d80'
+						DEFAULT: '#ff3a6a',
+						muted: '#ff3a6a80'
+					},
+					blue: {
+						DEFAULT: '#22e8ff',
+						muted: '#22e8ff80'
+					},
+					purple: {
+						DEFAULT: '#c851ff',
+						muted: '#c851ff80'
 					}
 				}
 			},
@@ -93,8 +103,10 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			boxShadow: {
-				'neon-red': '0 0 5px #ff1a3e, 0 0 20px rgba(255, 26, 62, 0.3)',
-				'neon-blue': '0 0 5px #1ed5ff, 0 0 20px rgba(30, 213, 255, 0.3)',
+				'neon-red': '0 0 5px #ff3a6a, 0 0 20px rgba(255, 58, 106, 0.4)',
+				'neon-blue': '0 0 5px #22e8ff, 0 0 20px rgba(34, 232, 255, 0.4)',
+				'neon-purple': '0 0 5px #c851ff, 0 0 20px rgba(200, 81, 255, 0.4)',
+				'neon-teal': '0 0 5px #0affc2, 0 0 20px rgba(10, 255, 194, 0.4)',
 			},
 			keyframes: {
 				'accordion-down': {

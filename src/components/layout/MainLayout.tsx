@@ -10,19 +10,7 @@ interface MainLayoutProps {
 
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
-    <div className="min-h-screen flex flex-col">
-      {/* Fixed background with the new red cyberpunk image */}
-      <div 
-        className="fixed inset-0 bg-cover bg-center bg-no-repeat -z-10" 
-        style={{ 
-          backgroundImage: "url('/lovable-uploads/425a63c2-009f-48e6-8d55-31ac4bfa49fa.png')", 
-          backgroundAttachment: "fixed" 
-        }}
-      ></div>
-      
-      {/* Dark gradient overlay to make content more readable */}
-      <div className="fixed inset-0 bg-black/40 -z-10"></div>
-      
+    <div className="min-h-screen flex flex-col bg-background">
       <Navbar />
       <motion.main 
         className="flex-grow relative z-10"

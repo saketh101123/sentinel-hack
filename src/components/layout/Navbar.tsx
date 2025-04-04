@@ -45,11 +45,19 @@ const Navbar = () => {
   }, [isOpen]);
 
   const scrollToSection = (id: string) => {
-    setIsOpen(false);
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    setIsOpen(false); // Close the mobile menu
+    
+    // Adding a slight delay to ensure the menu closes before scrolling
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        // Using a more robust scrolling method
+        window.scrollTo({
+          top: element.offsetTop - 80, // Offset to account for navbar height
+          behavior: 'smooth'
+        });
+      }
+    }, 100);
   };
 
   return (

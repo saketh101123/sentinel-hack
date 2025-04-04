@@ -31,6 +31,19 @@ const Navbar = () => {
     };
   }, [scrolled]);
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   const scrollToSection = (id: string) => {
     setIsOpen(false);
     const element = document.getElementById(id);
@@ -101,14 +114,14 @@ const Navbar = () => {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden glassmorphism absolute top-full left-0 w-full overflow-hidden"
+            className="md:hidden fixed inset-0 top-[57px] backdrop-blur-lg bg-cyber-dark/70 z-50 overflow-auto"
           >
-            <div className="container mx-auto px-4 py-4 flex flex-col space-y-3">
+            <div className="container mx-auto px-4 py-6 flex flex-col space-y-5">
               {navItems.map((item, index) => (
                 <button
                   key={index}
                   onClick={() => scrollToSection(item.id)}
-                  className="font-cyber text-sm uppercase tracking-wider py-2 text-left hover:text-neon-red transition-colors duration-300"
+                  className="font-cyber text-base uppercase tracking-wider py-3 text-left hover:text-neon-red transition-colors duration-300 border-b border-cyber-red/20"
                 >
                   {item.name}
                 </button>
@@ -117,7 +130,7 @@ const Navbar = () => {
                 href="https://forms.google.com/register-sentinel-hack"
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="font-cyber text-sm uppercase tracking-wider bg-cyber-red px-6 py-2 text-center rounded clip-slant hover:shadow-neon-red transition-all duration-300"
+                className="font-cyber text-base uppercase tracking-wider bg-cyber-red px-6 py-3 mt-4 text-center rounded clip-slant hover:shadow-neon-red transition-all duration-300"
                 onClick={() => setIsOpen(false)}
               >
                 Register

@@ -38,10 +38,10 @@ const HeroSection = () => {
         {/* Institution header - Now centered */}
         <div className="flex flex-col items-center justify-center mb-8 md:mb-12">
           <div className="flex flex-row items-center justify-center gap-4 md:gap-6 lg:gap-10">
-            {/* Left logo (KSIT) */}
+            {/* Left logo (KSIT) - Updated with new image */}
             <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24">
               <img 
-                src="/lovable-uploads/fc380532-71fb-496f-bd40-ac362af0f3e7.png" 
+                src="/lovable-uploads/492532dc-e4ce-49f8-8c94-b287bed8e7d8.png" 
                 alt="KSIT Logo" 
                 className="w-full h-full object-contain"
               />

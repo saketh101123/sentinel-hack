@@ -2,49 +2,49 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Agriculture, Book, Medkit, Shield, Wallet, Bulb } from 'lucide-react';
+import { Leaf, GraduationCap, Stethoscope, ShieldAlert, DollarSign, Lightbulb } from 'lucide-react';
 
 const tracks = [
   {
     title: "Agriculture",
     subtitle: "Innovative Farming Solutions",
     description: "Develop solutions to enhance farming efficiency, sustainability, and productivity through technology.",
-    icon: <Agriculture className="h-8 w-8 text-cyber-blue" />,
+    icon: <Leaf className="h-8 w-8 text-cyber-blue" />,
     color: 'neon-blue'
   },
   {
     title: "Education",
     subtitle: "EdTech & Learning",
     description: "Create platforms and tools that revolutionize how we learn and teach in the digital age.",
-    icon: <Book className="h-8 w-8 text-cyber-green" />,
+    icon: <GraduationCap className="h-8 w-8 text-cyber-green" />,
     color: 'neon-green'
   },
   {
     title: "Healthcare",
     subtitle: "Medical Innovations",
     description: "Build solutions that improve healthcare access, diagnosis, treatment, and patient monitoring.",
-    icon: <Medkit className="h-8 w-8 text-cyber-red" />,
+    icon: <Stethoscope className="h-8 w-8 text-cyber-red" />,
     color: 'neon-red'
   },
   {
     title: "CyberSecurity",
     subtitle: "Digital Defense",
     description: "Develop tools and systems to protect digital assets, privacy, and security in our connected world.",
-    icon: <Shield className="h-8 w-8 text-cyber-purple" />,
+    icon: <ShieldAlert className="h-8 w-8 text-cyber-purple" />,
     color: 'neon-purple'
   },
   {
     title: "FinTech",
     subtitle: "Financial Technologies",
     description: "Create innovative solutions for financial services, transactions, and economic inclusivity.",
-    icon: <Wallet className="h-8 w-8 text-cyber-yellow" />,
+    icon: <DollarSign className="h-8 w-8 text-cyber-yellow" />,
     color: 'neon-yellow'
   },
   {
     title: "Open Innovation",
     subtitle: "Creative Solutions",
     description: "Showcase your creativity with solutions that don't fit into other categories but solve real problems.",
-    icon: <Bulb className="h-8 w-8 text-cyber-blue" />,
+    icon: <Lightbulb className="h-8 w-8 text-cyber-blue" />,
     color: 'neon-blue'
   }
 ];

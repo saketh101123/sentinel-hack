@@ -2,31 +2,50 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Agriculture, Book, Medkit, Shield, Wallet, Bulb } from 'lucide-react';
 
 const tracks = [
   {
-    title: 'Artificial Intelligence',
-    description: 'Develop AI solutions that address real-world challenges in healthcare, education, or environmental sustainability.',
-    icon: '🤖',
-    color: 'neon-red'
-  },
-  {
-    title: 'Blockchain Revolution',
-    description: 'Create decentralized applications with blockchain technology that redefine financial systems, supply chains, or digital identity.',
-    icon: '⛓️',
+    title: "Agriculture",
+    subtitle: "Innovative Farming Solutions",
+    description: "Develop solutions to enhance farming efficiency, sustainability, and productivity through technology.",
+    icon: <Agriculture className="h-8 w-8 text-cyber-blue" />,
     color: 'neon-blue'
   },
   {
-    title: 'Cybersecurity Defense',
-    description: 'Build tools or systems that enhance digital security, protect privacy, or combat emerging cyber threats.',
-    icon: '🔒',
+    title: "Education",
+    subtitle: "EdTech & Learning",
+    description: "Create platforms and tools that revolutionize how we learn and teach in the digital age.",
+    icon: <Book className="h-8 w-8 text-cyber-green" />,
+    color: 'neon-green'
+  },
+  {
+    title: "Healthcare",
+    subtitle: "Medical Innovations",
+    description: "Build solutions that improve healthcare access, diagnosis, treatment, and patient monitoring.",
+    icon: <Medkit className="h-8 w-8 text-cyber-red" />,
+    color: 'neon-red'
+  },
+  {
+    title: "CyberSecurity",
+    subtitle: "Digital Defense",
+    description: "Develop tools and systems to protect digital assets, privacy, and security in our connected world.",
+    icon: <Shield className="h-8 w-8 text-cyber-purple" />,
     color: 'neon-purple'
   },
   {
-    title: 'Augmented Reality',
-    description: 'Design immersive AR experiences that transform education, shopping, entertainment, or workplace collaboration.',
-    icon: '👓',
-    color: 'neon-red'
+    title: "FinTech",
+    subtitle: "Financial Technologies",
+    description: "Create innovative solutions for financial services, transactions, and economic inclusivity.",
+    icon: <Wallet className="h-8 w-8 text-cyber-yellow" />,
+    color: 'neon-yellow'
+  },
+  {
+    title: "Open Innovation",
+    subtitle: "Creative Solutions",
+    description: "Showcase your creativity with solutions that don't fit into other categories but solve real problems.",
+    icon: <Bulb className="h-8 w-8 text-cyber-blue" />,
+    color: 'neon-blue'
   }
 ];
 
@@ -49,7 +68,7 @@ const TracksSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {tracks.map((track, index) => (
             <motion.div
               key={index}
@@ -59,9 +78,12 @@ const TracksSection = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="glassmorphism p-4 sm:p-5 md:p-6 rounded-lg border border-white/10 hover:border-neon-blue/50 transition-all duration-300"
             >
-              <div className="text-2xl sm:text-3xl md:text-4xl mb-2 sm:mb-3 md:mb-4">{track.icon}</div>
-              <h3 className={`text-base sm:text-lg md:text-xl font-cyber mb-1 sm:mb-2 md:mb-3 text-${track.color}`}>{track.title}</h3>
-              <p className="text-gray-300 text-xs sm:text-sm md:text-base">{track.description}</p>
+              <div className="flex flex-col items-center text-center">
+                <div className="mb-3 sm:mb-4">{track.icon}</div>
+                <h3 className={`text-lg sm:text-xl md:text-xl font-cyber mb-1 sm:mb-2 text-${track.color}`}>{track.title}</h3>
+                <h4 className="text-sm sm:text-base text-gray-400 mb-2 sm:mb-3 italic">{track.subtitle}</h4>
+                <p className="text-gray-300 text-xs sm:text-sm md:text-base">{track.description}</p>
+              </div>
             </motion.div>
           ))}
         </div>

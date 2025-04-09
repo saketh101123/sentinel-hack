@@ -74,8 +74,10 @@ const AboutSection = () => {
                   <span className="text-base sm:text-lg md:text-xl">📍</span>
                 </div>
                 <div>
+                  <a href="https://maps.app.goo.gl/bWyLk1W3xV9Wxv438" target="_blank" rel="noopener noreferrer" className="underline text-neon-blue hover:text-neon-blue/80 transition">
                   <h3 className="font-cyber text-sm sm:text-base md:text-lg">Venue</h3>
                   <p className="text-xs sm:text-sm md:text-base text-gray-300">KSIT Campus, Bengaluru</p>
+                  </a>
                 </div>
               </div>
               <div className="flex items-center">

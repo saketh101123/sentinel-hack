@@ -76,12 +76,14 @@ const Footer = () => {
             <h3 className="text-lg font-cyber mb-4">Contact Us</h3>
             <p className="mb-2 text-gray-300">
               <span className="block font-semibold">Email:</span>
-              <a href="mailto:info@SentinelHack" className="hover:text-neon-red transition-colors">info@SentinelHack</a>
+              <a href="mailto:Sentinelhack5.0@ksit.edu.in" className="hover:text-neon-red transition-colors">Sentinelhack5.0@ksit.edu.in</a>
             </p>
             <p className="mb-2 text-gray-300">
               <span className="block font-semibold">Location:</span>
+              <a href="https://maps.app.goo.gl/bWyLk1W3xV9Wxv438" target="_blank" rel="noopener noreferrer" className="underline text-neon-blue hover:text-neon-blue/80 transition">
               KSIT Campus,<br/>
               Bengaluru, Karnataka
+              </a>
             </p>
             <p className="mt-4">
               <a 

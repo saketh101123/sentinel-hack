@@ -1,46 +1,26 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Check, AlertTriangle } from 'lucide-react';
+import { Ban, BookCheck, AlertTriangle } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 
 const RulesSection = () => {
-  const rules = [
-    {
-      id: 1,
-      title: "Team Composition",
-      description: "Teams must consist of 2-4 members. All team members must be enrolled in an accredited college or university.",
-      icon: <Shield className="h-8 w-8 text-cyber-red" />,
-      type: "requirement"
-    },
-    {
-      id: 2,
-      title: "Original Work",
-      description: "All code must be written during the hackathon. The use of open-source libraries and frameworks is permitted, but pre-built projects are not allowed.",
-      icon: <Check className="h-8 w-8 text-cyber-red" />,
-      type: "requirement"
-    },
-    {
-      id: 3,
-      title: "Intellectual Property",
-      description: "All projects created during the hackathon remain the intellectual property of the team that created them.",
-      icon: <Check className="h-8 w-8 text-cyber-red" />,
-      type: "requirement"
-    },
-    {
-      id: 4,
-      title: "Code of Conduct",
-      description: "Participants must adhere to the event's code of conduct. Any form of harassment or discrimination will not be tolerated.",
-      icon: <AlertTriangle className="h-8 w-8 text-white" />,
-      type: "restriction"
-    },
-    {
-      id: 5,
-      title: "Submission Deadline",
-      description: "All projects must be submitted by the official deadline. Late submissions will not be considered for judging.",
-      icon: <AlertTriangle className="h-8 w-8 text-white" />,
-      type: "restriction"
-    }
+  const restrictions = [
+    "Participants should bring their own laptops, chargers, spike busters, and any additional hardware needed.",
+    "Participants need to bring their college ID cards.",
+    "Team leaders will receive a Registration Confirmation Mail upon entry finalization.",
+    "Snacks and Beverages will be provided.",
+    "Registration fee is Rs.200 per person (non-refundable).",
+    "Teams must have between 2 to 4 members."
+  ];
+
+  const regulations = [
+    "Participants must follow instructions from the organizing committee.",
+    "Once inside the venue, participants are not permitted to leave until the event ends.",
+    "Downloading entire templates during the event will lead to disqualification.",
+    "Judges' decisions are final.",
+    "Teams cannot withdraw once registered.",
+    "Terms and conditions apply."
   ];
 
   return (
@@ -55,10 +35,10 @@ const RulesSection = () => {
           className="text-center mb-12 md:mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-cyber font-bold mb-4">
-            <span className="neon-text-red">COMPETITION</span> <span className="text-white">RULES</span>
+            <span className="neon-text-red">RULES &</span> <span className="text-white">REGULATIONS</span>
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            To ensure fair play and maintain the integrity of the hackathon, all participants must adhere to the following rules and guidelines.
+            Please review all guidelines carefully before participating
           </p>
         </motion.div>
 
@@ -70,17 +50,15 @@ const RulesSection = () => {
             viewport={{ once: true }}
             className="bg-black/30 border border-cyber-red/30 p-6 rounded-lg glassmorphism"
           >
-            <h3 className="text-2xl font-cyber font-bold mb-6 neon-text-red">Requirements</h3>
-            <div className="space-y-6">
-              {rules.filter(rule => rule.type === "requirement").map((rule) => (
-                <div key={rule.id} className="flex gap-4">
-                  <div className="shrink-0 mt-1">
-                    {rule.icon}
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-cyber mb-2">{rule.title}</h4>
-                    <p className="text-gray-300">{rule.description}</p>
-                  </div>
+            <h3 className="text-2xl font-cyber font-bold mb-6 flex items-center gap-2 neon-text-red">
+              <Ban className="h-6 w-6" />
+              Restrictions
+            </h3>
+            <div className="space-y-4">
+              {restrictions.map((restriction, index) => (
+                <div key={index} className="flex gap-3 items-start">
+                  <AlertTriangle className="h-5 w-5 text-cyber-red shrink-0 mt-1" />
+                  <p className="text-gray-300">{restriction}</p>
                 </div>
               ))}
             </div>
@@ -93,17 +71,15 @@ const RulesSection = () => {
             viewport={{ once: true }}
             className="bg-black/30 border border-cyber-red/30 p-6 rounded-lg glassmorphism"
           >
-            <h3 className="text-2xl font-cyber font-bold mb-6 text-white">Restrictions</h3>
-            <div className="space-y-6">
-              {rules.filter(rule => rule.type === "restriction").map((rule) => (
-                <div key={rule.id} className="flex gap-4">
-                  <div className="shrink-0 mt-1">
-                    {rule.icon}
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-cyber mb-2">{rule.title}</h4>
-                    <p className="text-gray-300">{rule.description}</p>
-                  </div>
+            <h3 className="text-2xl font-cyber font-bold mb-6 flex items-center gap-2 text-white">
+              <BookCheck className="h-6 w-6" />
+              Regulations
+            </h3>
+            <div className="space-y-4">
+              {regulations.map((regulation, index) => (
+                <div key={index} className="flex gap-3 items-start">
+                  <AlertTriangle className="h-5 w-5 text-white shrink-0 mt-1" />
+                  <p className="text-gray-300">{regulation}</p>
                 </div>
               ))}
             </div>

@@ -2,24 +2,53 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, MapPin, DollarSign, Clock, Coffee, Users, ClipboardCheck, HelpCircle, Laptop, MessageCircle } from 'lucide-react';
 
 const faqs = [
   {
-    question: 'Who can participate in the hackathon?',
-    answer: "Sentinel Hack 5.0 is open to everyone - students, professionals, and hobbyists alike. All you need is a passion for technology and innovation. Teams can include up to 4 members."
+    question: 'When and Where?',
+    answer: "Sentinel Hack will take place on May 4th and 5th at K.S Institute of Technology, 14, Kanakapura Main Road, Municipal Corporation Layout, Raghuvanahalli, Bengaluru, Karnataka 560109. Click here for more details.",
+    icon: <MapPin className="h-4 w-4 text-neon-blue" />
   },
   {
-    question: 'What should I bring to the hackathon?',
-    answer: "Participants should bring their own laptops, chargers, and any hardware they need for their projects. We'll provide the working space, internet, food, and beverages."
+    question: 'How much will it cost?',
+    answer: "The participation cost per head is Rs.800",
+    icon: <DollarSign className="h-4 w-4 text-neon-blue" />
   },
   {
-    question: 'Is there a registration fee?',
-    answer: "No, participation in Sentinel Hack 5.0 is completely free. All you need to do is register through our Google Form before the deadline."
+    question: 'Duration?',
+    answer: "You will have 24 hours to build your product. The event starts Thursday morning and runs until Friday morning. A detailed schedule will be released closer to the event.",
+    icon: <Clock className="h-4 w-4 text-neon-blue" />
   },
   {
-    question: 'Will there be prizes?',
-    answer: "Yes! We have a prize pool worth over $50,000, including cash prizes, tech gadgets, investment opportunities, and more for winners in different categories."
+    question: 'Food?',
+    answer: "We will provide free grub to keep you hacking for 24 hours. There will also be stalls for your convenience.",
+    icon: <Coffee className="h-4 w-4 text-neon-blue" />
+  },
+  {
+    question: 'How do teams work?',
+    answer: "Teams can have 2-4 members. Cross-college teams are allowed and members can be from different colleges.",
+    icon: <Users className="h-4 w-4 text-neon-blue" />
+  },
+  {
+    question: 'How does registration work?',
+    answer: "Apply via the provided Google form. Payment is made through online apps and a transaction screenshot must be uploaded. Confirmation will be sent via email.",
+    icon: <ClipboardCheck className="h-4 w-4 text-neon-blue" />
+  },
+  {
+    question: 'What if this is my first hackathon?',
+    answer: "Don't worry – there will be mentors to help you. Plus, we have fun surprises for newcomers.",
+    icon: <HelpCircle className="h-4 w-4 text-neon-blue" />
+  },
+  {
+    question: 'What should I bring?',
+    answer: "Bring your college ID, laptop, charger, and spike busters.",
+    icon: <Laptop className="h-4 w-4 text-neon-blue" />
+  },
+  {
+    question: 'Anything else?',
+    answer: "Feel free to email us or reach out on Instagram if you have any questions.",
+    icon: <MessageCircle className="h-4 w-4 text-neon-blue" />
   }
 ];
 
@@ -65,7 +94,10 @@ const FAQSection: React.FC = () => {
                 } transition-all duration-300`}
               >
                 <div className="flex justify-between items-center">
-                  <h3 className="font-cyber text-sm sm:text-base md:text-lg pr-3">{faq.question}</h3>
+                  <div className="flex items-center space-x-2">
+                    {faq.icon}
+                    <h3 className="font-cyber text-sm sm:text-base md:text-lg pr-3">{faq.question}</h3>
+                  </div>
                   <ChevronDown 
                     className={`h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0 transition-transform ${
                       activeIndex === index ? 'transform rotate-180' : ''

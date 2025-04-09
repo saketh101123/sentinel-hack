@@ -1,16 +1,17 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Card, CardContent } from '@/components/ui/card';
 
 const sponsors = [
-  { name: 'TechGiant', level: 'Platinum' },
-  { name: 'QuantumSoft', level: 'Gold' },
-  { name: 'CyberSystems', level: 'Gold' },
-  { name: 'Datarithm', level: 'Silver' },
-  { name: 'InnovateLabs', level: 'Silver' },
-  { name: 'NexGen', level: 'Bronze' },
-  { name: 'ByteCraft', level: 'Bronze' },
-  { name: 'CloudPeak', level: 'Bronze' },
+  { name: 'TechGiant', level: 'Platinum', image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=200&h=100&auto=format&fit=crop&q=80' },
+  { name: 'QuantumSoft', level: 'Gold', image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=200&h=100&auto=format&fit=crop&q=80' },
+  { name: 'CyberSystems', level: 'Gold', image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=200&h=100&auto=format&fit=crop&q=80' },
+  { name: 'Datarithm', level: 'Silver', image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=200&h=100&auto=format&fit=crop&q=80' },
+  { name: 'InnovateLabs', level: 'Silver', image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=200&h=100&auto=format&fit=crop&q=80' },
+  { name: 'NexGen', level: 'Bronze', image: 'https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=200&h=100&auto=format&fit=crop&q=80' },
+  { name: 'ByteCraft', level: 'Bronze', image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=200&h=100&auto=format&fit=crop&q=80' },
+  { name: 'CloudPeak', level: 'Bronze', image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=200&h=100&auto=format&fit=crop&q=80' },
 ];
 
 const SponsorsSection = () => {
@@ -42,10 +43,25 @@ const SponsorsSection = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
-              className="glassmorphism flex flex-col items-center justify-center p-3 sm:p-4 md:p-6 h-20 sm:h-24 md:h-32 rounded-lg border border-white/10 hover:border-neon-red/50 transition-all duration-300"
+              className="flex flex-col items-center justify-center rounded-lg overflow-hidden border border-white/10 hover:border-neon-red/50 transition-all duration-300"
             >
-              <span className="text-sm sm:text-base md:text-xl font-cyber">{sponsor.name}</span>
-              <span className="text-xs mt-1 md:mt-2 text-gray-400">{sponsor.level} Sponsor</span>
+              <Card className="w-full h-full bg-transparent border-0">
+                <CardContent className="p-0">
+                  <div className="flex flex-col items-center">
+                    <div className="w-full h-16 sm:h-20 md:h-24 mb-2 bg-black/20 overflow-hidden">
+                      <img 
+                        src={sponsor.image} 
+                        alt={`${sponsor.name} logo`} 
+                        className="w-full h-full object-cover object-center" 
+                      />
+                    </div>
+                    <div className="p-3 text-center">
+                      <span className="text-sm sm:text-base md:text-xl font-cyber">{sponsor.name}</span>
+                      <span className="block text-xs mt-1 md:mt-2 text-gray-400">{sponsor.level} Sponsor</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </motion.div>
           ))}
         </div>

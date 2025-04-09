@@ -122,7 +122,7 @@ const Navbar = () => {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden fixed inset-0 top-[57px] backdrop-blur-lg bg-cyber-dark/70 z-50 overflow-auto"
+            className="md:hidden inset-0 top-[57px] backdrop-blur-lg bg-cyber-dark/70 z-50 overflow-auto"
           >
             <div className="container mx-auto px-4 py-6 flex flex-col space-y-5">
               {navItems.map((item, index) => (

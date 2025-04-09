@@ -6,12 +6,24 @@ import { ChevronDown, MapPin, DollarSign, Clock, Coffee, Users, ClipboardCheck, 
 const faqs = [
   {
     question: 'When and Where?',
-    answer: "Sentinel Hack will take place on May 4th and 5th at K.S Institute of Technology, 14, Kanakapura Main Road, Municipal Corporation Layout, Raghuvanahalli, Bengaluru, Karnataka 560109. Click here for more details.",
-    icon: <MapPin className="h-4 w-4 text-neon-blue" />
+    answer: (
+      <>
+        Sentinel Hack will take place on May 4th and 5th at K.S Institute of Technology, 14, Kanakapura Main Road, Municipal Corporation Layout, Raghuvanahalli, Bengaluru, Karnataka 560109.{" "}
+        <a
+          href="https://maps.app.goo.gl/bWyLk1W3xV9Wxv438"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline text-neon-blue hover:text-neon-blue/80 transition"
+        >
+          Click here for the map.
+        </a>
+      </>
+    ),
+        icon: <MapPin className="h-4 w-4 text-neon-blue" />
   },
   {
     question: 'How much will it cost?',
-    answer: "The participation cost per head is Rs.800",
+    answer: "The participation cost per head is Rs.200",
     icon: <DollarSign className="h-4 w-4 text-neon-blue" />
   },
   {

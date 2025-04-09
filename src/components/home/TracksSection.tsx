@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { Leaf, GraduationCap, Stethoscope, ShieldAlert, DollarSign, Lightbulb } from 'lucide-react';
 
 const tracks = [
@@ -87,35 +86,6 @@ const TracksSection = () => {
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mt-6 sm:mt-8 md:mt-12"
-        >
-          <Link
-            to="/tracks"
-            className="font-cyber inline-flex items-center border border-neon-blue px-4 py-2 sm:px-6 sm:py-3 rounded hover:shadow-neon-blue transition-all duration-300 text-xs sm:text-sm md:text-base"
-          >
-            Explore All Tracks
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              className="h-3 w-3 sm:h-4 sm:w-4 ml-2" 
-              fill="none" 
-              viewBox="0 0 24 24" 
-              stroke="currentColor"
-            >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={2} 
-                d="M9 5l7 7-7 7" 
-              />
-            </svg>
-          </Link>
-        </motion.div>
       </div>
     </section>
   );

@@ -1,7 +1,6 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { ChevronDown, MapPin, DollarSign, Clock, Coffee, Users, ClipboardCheck, HelpCircle, Laptop, MessageCircle } from 'lucide-react';
 
 const faqs = [
@@ -119,22 +118,6 @@ const FAQSection: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mt-6 sm:mt-8 md:mt-12"
-        >
-          <Link
-            to="/faqs"
-            className="font-cyber inline-flex items-center border border-neon-blue px-4 py-2 sm:px-6 sm:py-3 rounded hover:shadow-neon-blue transition-all duration-300 text-xs sm:text-sm md:text-base"
-          >
-            View All FAQs
-            <ChevronDown className="h-3 w-3 sm:h-4 sm:w-4 ml-2 transform rotate-270" />
-          </Link>
-        </motion.div>
       </div>
     </section>
   );
